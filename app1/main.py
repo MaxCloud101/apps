@@ -1,5 +1,6 @@
 from flask import Flask, escape, request
 from flask import json
+import logging
 
 app = Flask(__name__)
 
@@ -11,4 +12,5 @@ def hello():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(filename='/home/ubuntu/logging.log',level=logging.DEBUG)
     app.run(host='0.0.0.0', port=7000)
